@@ -11,7 +11,7 @@
 **/
 
 /* Legends */
-$GLOBALS['TL_LANG']['tl_news']['custom_clickthrough_legend'] = 'Brand Manager Settings';
+$GLOBALS['TL_LANG']['tl_news']['custom_clickthrough_legend'] = 'Custom Clickthrough Button';
 
 /* Fields */
-$GLOBALS['TL_LANG']['tl_news']['clickthrough_copy']          = array('Custom Clickthrough Button', 'Enter the copy that this news items button will display');
+$GLOBALS['TL_LANG']['tl_news']['clickthrough_copy']          = array('Custom Clickthrough Button', 'Enter the copy that this news item\'s button will display');
