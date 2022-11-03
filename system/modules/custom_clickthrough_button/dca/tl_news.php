@@ -12,6 +12,7 @@
 
  /* Extend the tl_news palettes */
 $GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace(';{teaser_legend}', ';{custom_clickthrough_legend},clickthrough_copy;{teaser_legend}', $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
+$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace(';{enclosure_legend:hide}', ';{featured_video_legend},featured_video;{enclosure_legend}', $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
 
 $GLOBALS['TL_DCA']['tl_news']['fields']['clickthrough_copy'] = array
 (
