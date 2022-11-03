@@ -30,6 +30,6 @@ $GLOBALS['TL_DCA']['tl_news']['fields']['featured_video'] = array
 	'inputType'               => 'textarea',
 	'default'                 => '',
 	'search'                  => true,
-	'eval'                    => array('mandatory'=>true, 'tl_class'=>'long'),
+	'eval'                    => array('mandatory'=>true, 'tl_class'=>'long', 'rte'=>'tinyMCE'),
 	'sql'                     => "varchar(255) NOT NULL default ''"
 );
