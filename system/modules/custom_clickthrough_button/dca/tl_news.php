@@ -15,10 +15,20 @@ $GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace(';{teaser_leg
 
 $GLOBALS['TL_DCA']['tl_news']['fields']['clickthrough_copy'] = array
 (
-    'label'                   => &$GLOBALS['TL_LANG']['tl_news']['clickthrough_copy'],
-		'inputType'               => 'text',
-		'default'                 => '',
-		'search'                  => true,
-		'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
-		'sql'                     => "varchar(255) NOT NULL default ''"
+	'label'                   => &$GLOBALS['TL_LANG']['tl_news']['clickthrough_copy'],
+	'inputType'               => 'text',
+	'default'                 => '',
+	'search'                  => true,
+	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+	'sql'                     => "varchar(255) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_news']['fields']['featured_video'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_news']['clickthrough_copy'],
+	'inputType'               => 'text',
+	'default'                 => '',
+	'search'                  => true,
+	'eval'                    => array('mandatory'=>true, 'tl_class'=>'w50'),
+	'sql'                     => "varchar(255) NOT NULL default ''"
 );
