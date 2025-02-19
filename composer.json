@@ -1,36 +1,41 @@
 {
-    "name":"bright-cloud-studio/custom-clickthrough-button",
+    "name":"bright-cloud-studio/isotope-product-search",
     "description":"Adds a custom field to Contao's news items to allow unique copy for each read more button.",
-    "homepage": "http://brightcloudstudio.com/",
     "keywords":["contao", "custom", "clickthrough", "button", "news"],
-    "type":"contao-module",
-    "license":"LGPL-3.0-or-later",
+    "type": "contao-bundle",
+    "homepage": "http://brightcloudstudio.com/",
+    "license": "LGPL-3.0+",
     "authors":[
         {
-            "name":"Bright Cloud Studio",
-            "homepage":"https://brightcloudstudio.com"
+            "name": "Bright Cloud Studio",
+            "homepage": "https://brightcloudstudio.com",
+            "email": "mark@brightcloudstudio.com",
+            "role": "Developer"
         }
     ],
-    "require":{
-        "php": "^8.0",
-        "contao/core-bundle": "^4.13"
+    "support":{
+        "issues": "https://github.com/bright-cloud-studio/custom-clickthrough-button/issues",
+        "source": "https://github.com/bright-cloud-studio/custom-clickthrough-button"
     },
-    "require-dev": {
-        "contao/manager-plugin": "^2.0"
+    "require":{
+        "php": "^7.3 || ^8.0",
+        "contao/core-bundle": "^4.9 || ^5.3"
+    },
+    "extra":{
+        "contao-manager-plugin": "Bcs\\CustomClickthroughButtonBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
-            "Bcs\\": [
-                "system/modules/custom_clickthrough_button/library/Bcs"
-            ]
-        }
-    },
-    "extra": {
-        "contao": {
-            "sources": {
-                "system/modules/custom_clickthrough_button": "system/modules/custom_clickthrough_button"
-            }
-        }
-    },
-    "minimum-stability": "dev"
+            "Bcs\\CustomClickthroughButtonBundle\\": "src"
+        },
+        "classmap": [
+            "src/Resources/contao"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
 }
