@@ -18,7 +18,7 @@
 
 
 $dc = &$GLOBALS['TL_DCA']['tl_news'];
-$dc['palettes']['default'] = str_replace(';{publish_legend}', ';{custom_clickthrough_legend},clickthrough_copy;{publish_legend}', $dc['palettes']['default']);
+$dc['palettes']['default'] = str_replace('{title_legend},headline,', ';{title_legend},', $dc['palettes']['default']);
 
 
 
