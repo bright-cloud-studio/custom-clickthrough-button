@@ -10,7 +10,15 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
 **/
 
-$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
+
+//$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
+PaletteManipulator::create()
+    ->addLegend('custom_clickthrough_legend', 'enclosure_legend', PaletteManipulator::POSITION_BEFORE)
+    ->addField('clickthrough_copy', 'custom_clickthrough_legend', PaletteManipulator::POSITION_APPEND)
+    ->applyToPalette('default', 'tl_news')
+;
+
 
 $GLOBALS['TL_DCA']['tl_news']['fields']['clickthrough_copy'] = array
 (
