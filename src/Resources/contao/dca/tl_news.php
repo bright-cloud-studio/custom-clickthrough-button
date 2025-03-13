@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
+if(!isset($GLOBALS['TL_DCA']['tl_news'])) {
+    return;
+}
+
 //$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
 PaletteManipulator::create()
     ->addLegend('custom_clickthrough_legend', 'publish_legend', PaletteManipulator::POSITION_AFTER)
