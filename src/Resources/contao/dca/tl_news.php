@@ -5,8 +5,18 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 
 //$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
+
+//PaletteManipulator::create()
+//    ->addLegend('custom_clickthrough_legend', 'publish_legend', PaletteManipulator::POSITION_AFTER)
+//    ->addField('clickthrough_copy', 'custom_clickthrough_legend', PaletteManipulator::POSITION_APPEND)
+//    ->applyToPalette('default', 'tl_news')
+//;
+
 PaletteManipulator::create()
-    ->addField('clickthrough_copy', 'author')
+    ->addLegend('custom_clickthrough_legend', 'publish_legend', PaletteManipulator::POSITION_BEFORE)
+    ->addLegend('featured_video_legend', 'custom_clickthrough_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('clickthrough_copy', 'custom_clickthrough_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('clickthrough_copy', 'featured_video_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('default', 'tl_news')
 ;
 
