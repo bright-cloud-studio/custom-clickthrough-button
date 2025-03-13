@@ -1,20 +1,12 @@
 <?php
 
-/**
- * Bright Cloud Studio's Custom Clickthrough Button
- *
- * Copyright (C) 2022 Bright Cloud Studio
- *
- * @package    bright-cloud-studio/custom-clickthrough-button
- * @link       https://www.brightcloudstudio.com/
- * @license    http://opensource.org/licenses/lgpl-3.0.html
-**/
+declare(strict_types=1);
 
 use Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 //$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
 PaletteManipulator::create()
-    ->addLegend('custom_clickthrough_legend', 'enclosure_legend', PaletteManipulator::POSITION_BEFORE)
+    ->addLegend('custom_clickthrough_legend', 'publish_legend', PaletteManipulator::POSITION_AFTER)
     ->addField('clickthrough_copy', 'custom_clickthrough_legend', PaletteManipulator::POSITION_APPEND)
     ->applyToPalette('default', 'tl_news')
 ;
