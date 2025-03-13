@@ -19,10 +19,12 @@
     },
     "require":{
         "php": "^7.3 || ^8.0",
-        "contao/core-bundle": "^4.9 || ^5.3"
+        "contao/core-bundle": "^4.9 || ^5.5",
+        "contao/news-bundle": "^5.3"
     },
     "require-dev": {
-        "contao/news-bundle": "~5.3"
+        "contao/core-bundle": "^4.9 || ^5.5",
+        "contao/news-bundle": "^5.3"
       },
     "extra":{
         "contao-manager-plugin": "Bcs\\CustomClickthroughButtonBundle\\ContaoManager\\Plugin"
