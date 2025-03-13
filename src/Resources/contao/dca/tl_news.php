@@ -10,8 +10,7 @@ if(!isset($GLOBALS['TL_DCA']['tl_news'])) {
 
 //$GLOBALS['TL_DCA']['tl_news']['palettes']['default'] = str_replace("author", "author,clickthrough_copy", $GLOBALS['TL_DCA']['tl_news']['palettes']['default']);
 PaletteManipulator::create()
-    ->addLegend('custom_clickthrough_legend', 'publish_legend', PaletteManipulator::POSITION_AFTER)
-    ->addField('clickthrough_copy', 'custom_clickthrough_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('clickthrough_copy', 'author')
     ->applyToPalette('default', 'tl_news')
 ;
 
