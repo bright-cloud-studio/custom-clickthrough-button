@@ -22,7 +22,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create('Bcs\CustomClickthroughButtonBundle\BcsCustomClickthroughButtonBundle')
-                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
+                ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle', 'Contao\NewsBundle\ContaoNewsBundle']),
         ];
     }
 }
